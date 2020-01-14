@@ -1,0 +1,131 @@
+@import "vars";
+
+/* ==========  Desktop First  ========== */
+
+/* ≥1200px */
+@include media-breakpoint-down(lg) {
+
+}
+
+/* ≥992px */
+@include media-breakpoint-down(md) {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+    }
+    .menu {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        max-height: calc(100% - 60px);
+        overflow: auto;
+        transform: translateX(-100%);
+        transition: all 0.3s ease;
+        &.active {
+            transform: translateX(0);
+        }
+        ul {
+            margin-bottom: 0;
+        }
+    }
+    .menu_item {
+        border-right: none;
+        width: 100%;
+        min-width: 320px;
+        border-bottom: 1px solid #ffffff;
+    }
+    .sub_menu {
+        display: none;
+    }
+    .main {
+        padding-top: 60px;
+    }
+    .header_top {
+        height: 60px;
+    }
+    .logo {
+        height: 40px;
+    }
+}
+
+/* ≥768px */
+@include media-breakpoint-down(sm) {
+
+}
+
+/* ≥576px */
+@include media-breakpoint-down(xs) {
+
+}
+
+
+/* ==========  Mobile First  ========== */
+
+/* ≤576px */
+@include media-breakpoint-up(sm) {
+
+}
+
+/* ≤768px */
+@include media-breakpoint-up(md) {
+
+}
+
+/* ≤992px */
+@include media-breakpoint-up(lg) {
+    .menu {
+        &_item {
+            &:hover {
+                background: darken($accent,10%);
+            }
+            &_has_children {
+                > a {
+                    &:after {
+                        content: '\f105';
+                        font-family: 'Font Awesome 5 Free';
+                        font-weight: 900;
+                        margin-left: 10px;
+                        vertical-align: middle;
+                        display: inline-block;
+                        transition: all 0.3s ease;
+                    }
+                }
+                &:hover {
+                    &:after {
+                        transform: rotate(90deg);
+                    }
+                    .sub_menu {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+    .sub_menu {
+        position: absolute;
+        background: $accent;
+        top: 100%;
+        left: 0;
+        min-width: 100%;
+        width: fit-content;
+        border-right: 1px solid $accent;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        display: inherit !important;
+        .menu_item {
+            border-right: 0;
+        }
+    }
+}
+
+/* ≤1200px */
+@include media-breakpoint-up(xl) {
+
+}
+

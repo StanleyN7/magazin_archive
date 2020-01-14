@@ -1,0 +1,11 @@
+/.git/
+/**/node_modules/
+/**/build/
+/**/source/
+*.zip
+*.rar
+/**/img_compressed/
+/**/_backstage
+/**/package-lock.json
+/**/Thumbs.db
+/**/*.DS_Store
