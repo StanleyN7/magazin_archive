@@ -38,8 +38,23 @@
         min-width: 320px;
         border-bottom: 1px solid #ffffff;
     }
+    .menu_item_has_children {
+        > a.active {
+            &:after {
+                transform: rotate(90deg);
+            }
+        }
+    }
     .sub_menu {
         display: none;
+        padding-left: 15px;
+        padding-right: 15px;
+        .menu_item {
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 15px;
+            }
+        }
     }
     .main {
         padding-top: 60px;
@@ -95,8 +110,10 @@
                     }
                 }
                 &:hover {
-                    &:after {
-                        transform: rotate(90deg);
+                    > a {
+                        &:after {
+                            transform: rotate(90deg);
+                        }
                     }
                     .sub_menu {
                         opacity: 1;
