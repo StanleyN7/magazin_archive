@@ -4,16 +4,19 @@
 				<div class="logo">
 					<img src="img/logo.png" alt="logo">
 				</div>
-				<div class="burger d-lg-none">
+				<div class="burger d-xl-none">
 					<span></span>
 					<span></span>
 					<span></span>
 					<span></span>
 				</div>
 			</div>
-
-			<div class="menu">
-				<ul class="d-flex align-items-center flex-column flex-lg-row">
+			<div class="menu d-flex align-items-center justify-content-xl-between flex-column flex-xl-row-reverse flex-xl-row">
+				<form class="search_form d-flex align-items-center" action="#">
+					<input class="search_input" type="text" placeholder="Поиск">
+					<button class="search_btn"><i class="fas fa-search"></i></button>
+				</form>
+				<ul class="d-flex align-items-center flex-column flex-xl-row">
 					<li class="menu_item menu_item_has_children">
 						<a href="#">Главная</a>
 						<ul class="sub_menu">
@@ -65,8 +68,6 @@
 					</li>
 				</ul>
 			</div>
-
-
 		</div>
 
 	</header>

@@ -6,7 +6,7 @@ $('.burger').on('click', function () {
 });
 
 $('.menu_item_has_children > a').on('click', function (e) {
-	if ($(window).width() <= 992) {
+	if ($(window).width() <= 1199) {
 		e.preventDefault();
 		$(this).closest('.menu_item_has_children').find('.sub_menu').slideToggle(300);
 		$(this).toggleClass('active');
