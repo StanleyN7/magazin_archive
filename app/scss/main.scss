@@ -230,6 +230,9 @@ button, .btn {
 	&_item {
 		min-height: 100px;
 		margin-bottom: 20px;
+		&:hover {
+			color: $accent;
+		}
 		&_img {
 			width: 40%;
 			img {
@@ -428,6 +431,22 @@ button, .btn {
 		}
 	}
 }
+.tags {
+	a {
+		margin-right: 10px;
+		margin-bottom: 10px;
+		color: darken($accent, 20%);
+		&:before {
+			content: '#';
+			display: inline-block;
+		}
+		&:hover {
+			color: $accent;
+			text-decoration: underline;
+		}
+	}
+}
+
 
 
 /*-- FOOTER --*/
