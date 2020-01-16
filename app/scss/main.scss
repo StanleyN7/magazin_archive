@@ -362,13 +362,72 @@ button, .btn {
 		}
 	}
 }
+.to_top_btn {
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	color: $accent;
+	font-size: 40px;
+	cursor: pointer;
+	background: #fff;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	@extend.animate;
+	z-index: 2;
+	&:hover {
+		color: darken($accent,10%);
+	}
+}
 
 /*-- MAIN --*/
 .main {
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
-
+.social {
+	.c_title {
+		background: $accent;
+		color: #ffffff;
+		&:after {
+			border-top-color: $accent;
+		}
+	}
+}
+.latest_news {
+	background: $accent;
+	padding: 15px;
+	margin-bottom: 20px;
+	color: #ffffff;
+	h3 {
+		text-align: center;
+		font-weight: normal;
+		font-size: 24px;
+		line-height: normal;
+		margin-bottom: 20px;
+	}
+	img {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	input {
+		border: none;
+		width: 100%;
+		height: 30px;
+		margin-bottom: 10px;
+	}
+	button {
+		color: #ffffff;
+		width: 100%;
+		margin-top: 15px;
+		padding: 5px 10px;
+		margin-bottom: 10px;
+		&:hover {
+			background: #fff;
+			color: $accent;
+		}
+	}
+}
 
 
 /*-- FOOTER --*/

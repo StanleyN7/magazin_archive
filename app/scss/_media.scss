@@ -88,7 +88,9 @@
 
 /* ≥576px */
 @include media-breakpoint-down(xs) {
-
+    .menu {
+        min-width: 100%;
+    }
 }
 
 

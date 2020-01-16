@@ -27,3 +27,9 @@ function closeMobMenu() {
 	$('.sub_menu').slideUp(300);
 	$('.burger').removeClass('active');
 }
+
+// To top
+$('body').on('click', '.to_top_btn', function(){
+	$('html, body').animate({ scrollTop: 0}, 1000);
+	return false;
+});
