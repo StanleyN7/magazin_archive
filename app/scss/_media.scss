@@ -29,7 +29,7 @@
     .menu_item {
         border-right: none;
         width: 100%;
-        min-width: 320px;
+        width: 320px;
         border-bottom: 1px solid #ffffff;
     }
     .menu_item_has_children {
@@ -44,6 +44,7 @@
         padding-left: 15px;
         padding-right: 15px;
         .menu_item {
+            width: 100%;
             &:last-child {
                 border-bottom: none;
                 margin-bottom: 15px;
@@ -90,6 +91,16 @@
 @include media-breakpoint-down(xs) {
     .menu {
         min-width: 100%;
+    }
+    .artcile_item_img,
+    .artcile_item_descr {
+        width: 100%;
+    }
+    .artcile_item_img {
+        margin-bottom: 15px;
+    }
+    .artcile_item_descr {
+        padding-left: 0;
     }
 }
 

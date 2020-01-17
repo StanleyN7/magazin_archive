@@ -33,3 +33,16 @@ $('body').on('click', '.to_top_btn', function(){
 	$('html, body').animate({ scrollTop: 0}, 1000);
 	return false;
 });
+
+// Home slider
+$('.home_slider').owlCarousel({
+	loop: true,
+	items:	1,
+	mouseDrag: false,
+	touchDrag: false,
+	dots: false,
+	nav: false,
+	smartSpeed: 500,
+	autoplay: true,
+	autoplayTimeout: 4000
+});

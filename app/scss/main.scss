@@ -201,7 +201,19 @@ button, .btn {
 		}
 	}
 }
-
+.dotet_list {
+	text-align: left;
+	list-style-type: disc;
+	list-style-position: inside;
+	a {
+		&:hover {
+			color: $accent;
+		}
+	}
+	&_item {
+		position: relative;
+	}
+}
 .views,
 .comments {
 	color: #777777;
@@ -225,13 +237,17 @@ button, .btn {
 		content: '\f086';
 	}
 }
-
 .artcile {
 	&_item {
 		min-height: 100px;
 		margin-bottom: 20px;
+		h4 {
+			@extend.animate;
+		}
 		&:hover {
-			color: $accent;
+			h4 {
+				color: $accent;
+			}
 		}
 		&_img {
 			width: 40%;
@@ -250,9 +266,24 @@ button, .btn {
 			text-align: justify;
 			margin-bottom: 10px;
 		}
+		&.middle_article {
+			a {
+				color: darken($accent,10%);
+				&:hover {
+					color: $accent;
+				}
+			}
+
+		}
 	}
 }
-
+.video_wrap {
+	iframe {
+		border: none;
+		width: 100%;
+		height: 300px;
+	}
+}
 
 /*-- HEADER --*/
 .header {
@@ -446,7 +477,28 @@ button, .btn {
 		}
 	}
 }
-
+.slider_item {
+	height: 300px;
+	display: block;
+	color: #fff;
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+	&_text {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 10px 15px;
+		background: rgba(0, 0, 0, 0.7);
+		text-align: center;
+	}
+	&:hover {
+		color: $accent;
+	}
+}
 
 
 /*-- FOOTER --*/
@@ -461,19 +513,6 @@ button, .btn {
 	&_title {
 		font-size: 22px;
 		margin-bottom: 10px;
-	}
-	&_list {
-		text-align: left;
-		list-style-type: disc;
-		list-style-position: inside;
-		a {
-			&:hover {
-				color: $accent;
-			}
-		}
-		&_item {
-			position: relative;
-		}
 	}
 }
 .social {
@@ -493,6 +532,40 @@ button, .btn {
 		}
 	}
 }
-
+.contacts {
+	text-align: left;
+}
+.phone,
+.email,
+.address {
+	margin-bottom: 10px;
+	display: block;
+	&:hover {
+		color: $accent;
+	}
+	&:before {
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+		display: inline-block;
+		width: 20px;
+		margin-right: 5px;
+		text-align: center;
+	}
+}
+.phone {
+	&:before {
+		content: '\f095';
+	}
+}
+.email {
+	&:before {
+		content: '\f0e0';
+	}
+}
+.address {
+	&:before {
+		content: '\f3c5';
+	}
+}
 
 @import "media"; /* Always at the end*/
