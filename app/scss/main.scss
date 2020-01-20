@@ -292,6 +292,10 @@ button, .btn {
 	z-index: 3;
 	&_top {
 		height: 90px;
+		background: url(../img/header.png);
+		background-size: 60% 100%;
+		background-repeat: no-repeat;
+		background-position: right;
 	}
 }
 .logo {
@@ -500,6 +504,47 @@ button, .btn {
 	}
 }
 
+.advertisement {
+	border-bottom: 1px dashed #000;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+
+.pagination {
+	ul {
+		margin-bottom: 0;
+	}
+	&_item {
+		margin-left: 5px;
+		margin-right: 5px;
+		border: 1px solid currentColor;
+		height: 30px;
+		width: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&.active {
+			color: $accent;
+		}
+		&:hover {
+			background: $accent;
+			color: #fff;
+		}
+	}
+	&_prev,
+	&_next {
+		font-size: 30px;
+		&:hover {
+			color: $accent;
+		}
+	}
+	&_prev {
+		margin-right: 10px;
+	}
+	&_next {
+		margin-left: 10px;
+	}
+}
 
 /*-- FOOTER --*/
 .footer {
