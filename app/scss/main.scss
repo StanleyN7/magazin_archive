@@ -355,6 +355,12 @@ button, .btn {
 				}
 			}
 		}
+		&.current_page {
+			> a {
+				text-decoration: underline;
+				background: darken($accent,10%);
+			}
+		}
 	}
 }
 .search {
