@@ -194,6 +194,10 @@ button, .btn {
 		&:first-child {
 			border-top: 1px dashed $text;
 		}
+		&.active {
+			color: red;
+			border-bottom-color: red;
+		}
 	}
 	a {
 		&:hover {
